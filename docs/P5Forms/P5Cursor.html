@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5forms Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <a href="https://bmorawiec.github.io/p5forms/">
+            <img src="../logo.png" class="logo">
+        </a>
+    </header>
+    <hr>
+    <ul>
+        <li><a href="../index.html">Home page</a></li>
+        <li><a href="../intro/index.html">Introduction</a></li>
+        <li>
+            <a href="index.html">P5Forms</a>
+            <ul>
+                <li><a href="P5Cursor.html">P5Cursor</a></li>
+                <li><a href="P5Form.html">P5Form</a></li>
+                <li><a href="P5FormManager.html">P5FormManager</a></li>
+                <li><a href="P5FormStyle.html">P5FormStyle</a></li>
+                <li><a href="P5MsgBox.html">P5MsgBox</a></li>
+                <li><a href="P5WindowAnimation.html">P5WindowAnimation</a></li>
+            </ul>
+        </li>
+        <li><a href="../p5controls/index.html">P5Controls</a></li>
+        
+    </ul>
+
+    <h2>P5Cursor</h2>
+
+    <p>Draws a custom mouse cursor</p>
+
+    <h3>Variables</h3>
+
+    <ul>
+        <li>
+            <code>
+                    (image) image
+                </code>
+            <p>
+                Gets or sets the cursor image.
+            </p>
+        </li>
+    </ul>
+
+    <h3>Functions</h3>
+    <h4 id="render">render()</h4>
+    <p>Renders the cursor on screen</p>
+
+    <h3>Setup</h3>
+    <xmp>
+var cur = new P5Cursor();
+
+function setup() {
+    ...
+    noCursor();     // Hide the system mouse cursor
+    ...
+}
+
+function draw() {
+    ...
+    cur.render();   // Render the p5forms cursor
+    ...
+}
+    </xmp>
+</body>
+
+</html>

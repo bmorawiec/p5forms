@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5forms Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <a href="https://bmorawiec.github.io/p5forms/">
+            <img src="../logo.png" class="logo">
+        </a>
+    </header>
+    <hr>
+    <ul>
+        <li><a href="../index.html">Home page</a></li>
+        <li><a href="../intro/index.html">Introduction</a></li>
+        <li>
+            <a href="index.html">P5Forms</a>
+            <ul>
+                <li><a href="P5Cursor.html">P5Cursor</a></li>
+                <li><a href="P5Form.html">P5Form</a></li>
+                <li><a href="P5FormManager.html">P5FormManager</a></li>
+                <li><a href="P5FormStyle.html">P5FormStyle</a></li>
+                <li><a href="P5MsgBox.html">P5MsgBox</a></li>
+                <li><a href="P5WindowAnimation.html">P5WindowAnimation</a></li>
+            </ul>
+        </li>
+        <li><a href="../p5controls/index.html">P5Controls</a></li>
+        
+    </ul>
+
+    <h2>P5MsgBox</h2>
+
+    <p>Displays a message box form. See: <a href="../intro/msgbox.html">Using a message box.</a></p>
+
+    <h3>Functions</h3>
+
+    <h4 id="showMsgBox">showMsgBox(wnd, title, text, icon, buttons, callback)</h4>
+    <p>Displays a message box form</p>
+    <ul>
+        <li>(P5Form) wnd - The form that the message box should be displayed over</li>
+        <li>(string) title - The text that should be displayed on the message box titlebar</li>
+        <li>(string) text - The text that should be displayed inside the message box</li>
+        <li>(image) icon - <code>MSGBOX_WARN_ICON, MSGBOX_INFO_ICON, MSGBOX_STOP_ICON, MSGBOX_QUESTION_ICON</code> or
+            any other image that should be displayed inside the message box</li>
+        <li>(Array) buttons - An array of strings containing the text of the buttons that should be displayed</li>
+        <li>(function) callback - A function that will be called after a message box button has been pressed. The text
+            of the selected button is passed into the callback function as an argument.</li>
+    </ul>
+
+</body>
+
+</html>

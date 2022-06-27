@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5forms Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <a href="https://bmorawiec.github.io/p5forms/">
+            <img src="../logo.png" class="logo">
+        </a>
+    </header>
+    <hr>
+    <ul>
+        <li><a href="../index.html">Home page</a></li>
+        <li>
+            <a href="index.html">Introduction</a>
+            <ul>
+                <li><a href="index.html">Getting started with p5forms</a></li>
+                <li><a href="forms.html">Adding and managing windows</a></li>
+                <li><a href="container.html">Adding and managing controls</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="msgbox.html">Using a message box</a></li>
+                <li><a href="list-box.html">Using a list box control</a></li>
+                <li><a href="picture-box.html">Using a picture box control</a></li>
+                <li><a href="text-box.html">Using a text box control</a></li>
+                <li><a href="tool-tip.html">Using a tool tip control</a></li>
+                <li><a href="anchors.html">Anchors</a></li>
+                <li><a href="styles.html">Styling</a></li>
+                <li><a href="control-types.html">Control types</a></li>
+                <li><a href="canvas.html">Drawing on a canvas</a></li>
+            </ul>
+        </li>
+        <li><a href="../P5Forms/index.html">P5Forms</a></li>
+        <li><a href="../p5controls/index.html">P5Controls</a></li>
+
+    </ul>
+
+    <p>
+        <h2>Adding and managing controls</h2>
+        
+        <h3>Video tutorial</h3>
+
+        <iframe class="tutorial" src="https://www.youtube.com/embed/5HIt7xhZsso?list=PLiuH6TNHiK_HAkWxX-Wjpatozww9cYNAC" title="p5forms / adding and managing controls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <h3>Creating and displaying a form with controls</h3>
+
+        <img class="example" src="container_Example.png">
+<xmp>
+var form, button, textBox;
+
+// preload(), setup()...
+
+function setup() {
+    createCanvas(1280, 720, P2D);
+	
+    form = new P5Form();
+
+    form.w = 200;
+    form.h = 200;
+    form.title = "My form";
+	
+    button = new P5Button();
+
+    button.y = 145;
+    button.text = "Click me!";
+	
+    textBox = new P5TextBox();
+
+    textBox.w = 185;
+    textBox.text = "Type here...";
+
+    form.container.addControl(button);
+    form.container.addControl(textBox);
+
+    formManager.showForm(form);
+}
+
+// keyPressed(), keyReleased()...
+</xmp>
+
+    <h3>Removing a control</h3>
+    Paste the following line into your browser console. The text box will be removed from the form.
+
+<xmp>
+form.container.removeControl(textBox);
+</xmp>
+
+    <h3>Removing all controls</h3>
+    Paste the following line into your browser console. All controls will be removed from the form.
+
+<xmp>
+form.container.removeAllControls();
+</xmp>
+
+    <br>
+
+    <h4>
+        Next see: <a href="events.html">Events</a>
+    </h4>
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: normal;
+    src: url(fonts/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+    src: url(fonts/SourceSansPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: normal;
+    src: url(fonts/SourceSerifPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: bold;
+    src: url(fonts/SourceSerifPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    font-weight: normal;
+    src: url(fonts/SourceCodePro-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    font-weight: bold;
+    src: url(fonts/SourceCodePro-Bold.ttf);
+}
+
+h1:before, h2:before, h3:before {
+    content: '# ';
+    color: blue;
+}
+
+h1, h2, h3 {
+    font-family: "Source Serif Pro";
+    margin-top: 50px;
+}
+
+body {
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    margin: 10px 100px;
+    margin-bottom: 200px;
+}
+
+code {
+    font-family: "Source Code Pro";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+xmp {
+    font-family: "Source Code Pro";
+    font-size: 16px;
+    width: 100%;
+    white-space: pre-wrap;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    border-bottom: 1px solid;
+}
+
+li {
+    padding: 5px;
+}
+
+ul > li > ul {
+    list-style: lower-alpha;
+}
+
+header {
+    padding: 5px;
+}
+
+hr {
+    border: 1px solid blue;
+}
+
+.logo {
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+}
+
+.home-grid > li {
+    font-family: "Source Serif Pro";
+    font-size: 18px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.tutorial {
+    width: 500px;
+    height: 280px;
+}

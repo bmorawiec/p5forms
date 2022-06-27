@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5forms Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <a href="https://bmorawiec.github.io/p5forms/">
+            <img src="../logo.png" class="logo">
+        </a>
+    </header>
+    <hr>
+    <ul>
+        <li><a href="../index.html">Home page</a></li>
+        <li><a href="../intro/index.html">Introduction</a></li>
+        <li>
+            <a href="index.html">P5Forms</a>
+            <ul>
+                <li><a href="P5Cursor.html">P5Cursor</a></li>
+                <li><a href="P5Form.html">P5Form</a></li>
+                <li><a href="P5FormManager.html">P5FormManager</a></li>
+                <li><a href="P5FormStyle.html">P5FormStyle</a></li>
+                <li><a href="P5MsgBox.html">P5MsgBox</a></li>
+                <li><a href="P5WindowAnimation.html">P5WindowAnimation</a></li>
+            </ul>
+        </li>
+        <li><a href="../p5controls/index.html">P5Controls</a></li>
+        
+    </ul>
+
+    <h2>P5FormManager</h2>
+
+    <p>Enables rendering and managing forms</p>
+
+    <h3>Variables</h3>
+
+    <ul>
+        <li>
+            <code>
+                    (boolean) controlKeyPressed
+                </code>
+            <p>
+                If true then the control key is currently pressed. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (P5ControlStyle) controlStyle
+                </code>
+            <p>
+                Gets or sets the current control style. See: <a href="../intro/styles.html">Styling</a>.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (string) font
+                </code>
+            <p>
+                Gets or sets the the name of the font family used to draw text inside forms.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) fontLeading
+                </code>
+            <p>
+                Gets or sets the the vertical spacing of the font used to draw text inside forms.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) fontSize
+                </code>
+            <p>
+                Gets or sets the the size of the font used to draw text inside forms.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (array of P5Form) forms
+                </code>
+            <p>
+                Contains all the forms currently shown.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (float) libVersion
+                </code>
+            <p>
+                Contains the library version in the VERSION.YYMMDD format. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) mouseIsPressed
+                </code>
+            <p>
+                If true then a mouse button is currently pressed. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) mouseIsReleased
+                </code>
+            <p>
+                If true then a mouse button was released in the current frame. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (P5Form) selectedWindow
+                </code>
+            <p>
+                Contains the window that is currently on top. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) shiftKeyPressed
+                </code>
+            <p>
+                If true then the shift key is currently pressed. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (P5FormStyle) windowStyle
+                </code>
+            <p>
+                Gets or sets the current window style of all the children. See: <a href="../intro/styles.html">Styling</a>.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) windowMoveInProgress
+                </code>
+            <p>
+                If true then a child window is being moved or resized. This field is read-only.
+            </p>
+        </li>
+    </ul>
+
+    <h3>Functions</h3>
+
+    <h4 id="bringFormToFront">bringFormToFront(form)</h4>
+    <p>Brings a given form to front</p>
+    <ul>
+        <li>(P5Form) form - Form that should be brough to front</li>
+    </ul>
+
+    <h4 id="closeForm">closeForm(form)</h4>
+    <p>Closes a given form</p>
+    <ul>
+        <li>(P5Form) form - Form that should be closed</li>
+    </ul>
+
+    <h4 id="isOnTop">(boolean) isOnTop(form)</h4>
+    <p>Returns if a given form is currently on top</p>
+    <ul>
+        <li>(P5Form) form - Form that should be checked</li>
+    </ul>
+
+    <h4 id="keyPressed">keyPressed()</h4>
+    <p>Triggered when a key is pressed. The user must manually include this function in the default p5.js keyPressed()
+        function.</p>
+
+    <h4 id="keyReleased">keyReleased()</h4>
+    <p>Triggered when a key is pressed. The user must manually include this function in the default p5.js keyReleased()
+        function.</p>
+
+    <h4 id="pointInsideBounds">(boolean) pointInsideBounds(px, py, x, y, w, h)</h4>
+    <p>Returns if a given point is inside given rectangle</p>
+    <ul>
+        <li>(int) px, py - position of the point</li>
+        <li>(int) x, y - position of the rectangle</li>
+        <li>(int) w, h - size of the rectangle</li>
+    </ul>
+
+    <h4 id="pointInsideTopWindow">(boolean) pointInsideTopWindow(x, y)</h4>
+    <p>Returns if a given point is inside selected window</p>
+    <ul>
+        <li>(int) x, y - position of the point</li>
+    </ul>
+
+    <h4 id="renderForms">renderForms()</h4>
+    <p>Renders all the open forms to the canvas</p>
+
+    <h4 id="showForm">showForm(form)</h4>
+    <p>Displays a given form</p>
+    <ul>
+        <li>(P5Form) form - Form that should be displayed</li>
+    </ul>
+
+    <h3>Setup</h3>
+    <xmp>
+var manager;
+
+function preload() {
+    ...
+    manager = new P5FormManager(); // !IMPORTANT! Instance the manager in the preload function
+    ...                            // (otherwise images won't load properly)
+}
+
+function keyPressed() {
+    ...
+    manager.keyPressed();   // Add manager keyPressed function to the p5.js keyPressed event function
+    ...
+}
+
+function keyReleased() {
+    ...
+    manager.keyReleased();  // Add manager keyReleased function to the p5.js keyReleased event function
+    ...
+}
+
+function draw() {
+    ...
+    manager.renderForms();   // Render the forms
+    ...
+}
+    </xmp>
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5forms Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <a href="https://bmorawiec.github.io/p5forms/">
+            <img src="../logo.png" class="logo">
+        </a>
+    </header>
+    <hr>
+    <ul>
+        <li><a href="../index.html">Home page</a></li>
+        <li>
+            <a href="index.html">Introduction</a>
+            <ul>
+                <li><a href="index.html">Getting started with p5forms</a></li>
+                <li><a href="forms.html">Adding and managing windows</a></li>
+                <li><a href="container.html">Adding and managing controls</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="msgbox.html">Using a message box</a></li>
+                <li><a href="list-box.html">Using a list box control</a></li>
+                <li><a href="picture-box.html">Using a picture box control</a></li>
+                <li><a href="text-box.html">Using a text box control</a></li>
+                <li><a href="tool-tip.html">Using a tool tip control</a></li>
+                <li><a href="anchors.html">Anchors</a></li>
+                <li><a href="styles.html">Styling</a></li>
+                <li><a href="control-types.html">Control types</a></li>
+                <li><a href="canvas.html">Drawing on a canvas</a></li>
+            </ul>
+        </li>
+        <li><a href="../P5Forms/index.html">P5Forms</a></li>
+        <li><a href="../p5controls/index.html">P5Controls</a></li>
+
+    </ul>
+
+    <p>
+        <h2>Getting started with p5forms</h2>
+        <h3>Downloads</h3>
+        <ul>
+            <li>p5.js library &mdash; <a
+                    href="https://github.com/processing/p5.js/releases/download/v1.4.1/p5.zip">Download</a>.</li>
+            <li>p5forms library &mdash; <a href="https://github.com/bmorawiec/p5forms">Download</a>.</li>
+        </ul>
+
+        <h3>Video tutorial</h3>
+
+        <iframe class="tutorial" src="https://www.youtube.com/embed/HFqmeSFlGbA?list=PLiuH6TNHiK_HAkWxX-Wjpatozww9cYNAC" title="p5forms / getting started" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <h3>The basics</h3>
+        <p>
+            Create project folder. Your folder should contain the following files:
+        <ul>
+            <li>
+                <code>index.html</code>
+                <p>Create an empty file</p>
+            </li>
+            <li>
+                <code>script.js</code>
+                <p>Create an empty file</p>
+            </li>
+            <li>
+                <code>p5.js</code>
+                <p>Copy this file from the p5.js library</p>
+            </li>
+            <li>
+                <code>p5controls.js</code>
+                <p>Copy this file from the p5forms library</p>
+            </li>
+            <li>
+                <code>p5forms.js</code>
+                <p>Copy this file from the p5forms library</p>
+            </li>
+            <li>
+                <code>p5forms_fonts.css</code>
+                <p>Copy this file from the p5forms library</p>
+            </li>
+            <li>
+                <code>p5forms_data</code>
+                <p>Copy this file from the p5forms library</p>
+            </li>
+        </ul>
+        Paste the following markup into the <code>index.html</code> file.
+<xmp>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project name goes here</title>
+
+    <!--Import the p5.js library-->
+    <script src="p5.js"></script>
+
+    <!--Import the p5forms library-->
+    <script src="p5forms.js"></script>
+    <script src="p5controls.js"></script>
+
+    <!--Import the script file-->
+    <script src="script.js" defer></script>
+</head>
+
+<body></body>
+
+</html>
+</xmp>
+        </p>
+        <h3>
+            Creating and setting up a form manager
+        </h3>
+        Paste the following code into your <code>script.js</code> file.
+<xmp>
+// Create a global variable for the form manager
+var formManager;
+
+function preload() {
+    // Create the form manager
+    formManager = new P5FormManager();
+}
+
+function setup() {
+    // Create a drawing canvas
+    createCanvas(1280, 720, P2D);
+}
+
+function draw() {
+    // Clear the background
+    background(255);
+
+    // Render the forms
+    formManager.renderForms();
+}
+
+function keyPressed() {     // p5.js key press event function
+    // Notify the formManager
+    formManager.keyPressed();
+}
+
+function keyReleased() {    // p5.js key release event function
+    // Notify the formManager
+    formManager.keyReleased();
+}
+</xmp>
+
+    <br>
+    <h4>
+        Next see: <a href="forms.html">Adding and managing windows</a>
+    </h4>
+    </p>
+</body>
+
+</html>

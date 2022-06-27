@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5forms Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <a href="https://bmorawiec.github.io/p5forms/">
+            <img src="../logo.png" class="logo">
+        </a>
+    </header>
+    <hr>
+    <ul>
+        <li><a href="../index.html">Home page</a></li>
+        <li><a href="../intro/index.html">Introduction</a></li>
+        <li>
+            <a href="index.html">P5Forms</a>
+            <ul>
+                <li><a href="P5Cursor.html">P5Cursor</a></li>
+                <li><a href="P5Form.html">P5Form</a></li>
+                <li><a href="P5FormManager.html">P5FormManager</a></li>
+                <li><a href="P5FormStyle.html">P5FormStyle</a></li>
+                <li><a href="P5MsgBox.html">P5MsgBox</a></li>
+                <li><a href="P5WindowAnimation.html">P5WindowAnimation</a></li>
+            </ul>
+        </li>
+        <li><a href="../p5controls/index.html">P5Controls</a></li>
+        
+    </ul>
+
+    <h2>P5Form</h2>
+
+    <p>Displays a window. See: <a href="../intro/forms.html">Adding and managing windows</a>.</p>
+
+    <h3>Variables</h3>
+
+    <ul>
+        <li>
+            <code>
+                    (int) absx
+                </code>
+            <p>
+                Contains the absolute x position of the window. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) absy
+                </code>
+            <p>
+                Contains the absolute y position of the window. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) borderWidth
+                </code>
+            <p>
+                Gets or sets the window border width.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (P5Container) container
+                </code>
+            <p>
+                Contains the container control for this window. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) enableHelpLines
+                </code>
+            <p>
+                Gets or sets the visibility of control bounds. See: <a href="../intro/help-lines.html">Help lines</a>.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) enableResizing
+                </code>
+            <p>
+                Gets or sets the ability for the user to resize the window.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) enableDragging
+                </code>
+            <p>
+                Gets or sets the ability for the user to move the window.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) h
+                </code>
+            <p>
+                Gets or sets the height of the window.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) isOnTop
+                </code>
+            <p>
+                If true then the window is on top and selected. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) keepBehind
+                </code>
+            <p>
+                If set to true, then the window will be kept under other windows.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (P5FormManager) manager
+                </code>
+            <p>
+                Contains the manager of the form. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) minh
+                </code>
+            <p>
+                Gets or sets the minimum window height.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) minw
+                </code>
+            <p>
+                Gets or sets the minimum window width.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) mouseIsPressed
+                </code>
+            <p>
+                If true then the window is selected and it's not being moved by the user and the mouse is pressed. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) mouseIsReleased
+                </code>
+            <p>
+                If true then the window is selected and it's not being moved by the user and the mouse was released in this frame. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) mouseX
+                </code>
+            <p>
+                Contains the mouse x position relative to the x position of the window. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) mouseY
+                </code>
+            <p>
+                Contains the mouse y position relative to the y position of the window. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) moveInProgress
+                </code>
+            <p>
+                If true then the window is currently being moved by the user now. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (P5Form) msgbox
+                </code>
+            <p>
+                Gets or sets the child of a form.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (boolean) resizeInProgress
+                </code>
+            <p>
+                If true then the window is currently being resized by the user now. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (P5FormStyle) style
+                </code>
+            <p>
+                Gets or sets the style of the particular form. For global use it's better to set the P5FormManager.windowStyle variable.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (string) title
+                </code>
+            <p>
+                Gets or sets the window title.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) titleBarHeight
+                </code>
+            <p>
+                Gets or sets the window title bar height.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (string) type
+                </code>
+            <p>
+                Contains the type of the object. See: <a href="../intro/control-types.html">Control types</a>. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) w
+                </code>
+            <p>
+                Gets or sets the width of the window.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) windowState
+                </code>
+            <p>
+                Contains the current window state. For setting the window state see <a href="#setWindowState">P5Form.setWindowState()</a>. This field is read-only.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) x
+                </code>
+            <p>
+                Gets or sets the x position of the window.
+            </p>
+        </li>
+        <li>
+            <code>
+                    (int) y
+                </code>
+            <p>
+                Gets or sets the y position of the window.
+            </p>
+        </li>
+    </ul>
+    
+    <h3>Functions</h3>
+
+    <h4 id="centerOnScreen">centerOnScreen()</h4>
+    <p>
+        Centers the window on screen.
+    </p>
+
+    <h4 id="removeWindowIcon">removeWindowIcon(wndic)</h4>
+    <p>
+        Removes a given window icon from the title bar.
+    </p>
+    <ul>
+        <li>wndic - Window icon that should be removed
+            <code>WND_MAXIMIZE_ICON, WND_RESTORE_ICON, WND_CLOSE_ICON, WND_RESIZE_ICON, WND_MINIMIZE_ICON</code></li>
+    </ul>
+
+    <h4 id="setWindowState">setWindowState(targetWindowState)</h4>
+    <p>
+        Sets the state of the window to a given state.
+    </p>
+    <ul>
+        <li>targetWindowState - Target window state
+            <code>WND_STATE_NORMAL, WND_STATE_MAXIMIZED, WND_STATE_MINIMIZED</code></li>
+    </ul>
+
+    <h3>Events</h3>
+    <h4>
+        See: <a href="../intro/events.html">Events</a>
+    </h4>
+
+    <h4 id="onClose">onClose()</h4>
+    <p>
+        Called before the window is closed by the manager.
+    </p>
+
+    <h4 id="onShow">onShow()</h4>
+    <p>
+        Called after the window is shown by the manager.
+    </p>
+
+    <h4 id="onRender">onRender()</h4>
+    <p>
+        Called after each window render.
+    </p>
+
+    <h4 id="onRender">onResize()</h4>
+    <p>
+        Called after window resize.
+    </p>
+    
+</body>
+
+</html>
