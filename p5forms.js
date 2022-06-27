@@ -1,5 +1,5 @@
 /*
-*	p5forms for p5.js (Version 1.22.06.27)
+*	p5forms for p5.js (Version 1.22.06.22)
 *	Easily create and manage windows and controls on the p5.js canvas
 *	Created by Bartosz Morawiec, 2022
 *	https://bmorawiec.github.io/
@@ -30,7 +30,7 @@ class P5FormStyle {
 }
 
 class P5FormManager {
-	libVersion = 1.220627;
+	libVersion = 1.220622;
 	libAuthor = "io.github.bmorawiec";
 	libFork = "bmorawiec";
 
